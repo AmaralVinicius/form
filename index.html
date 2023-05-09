@@ -1,63 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Cadastro</title>
 </head>
 <body>
+  <div id="main">
+    <h1>Cadastro de DEVs</h1>
+    <p>Preencha suas informações:</p>
 
-  <div>
-    <h1 id="title">Cadastro de DEVs</h1>
-    <p id="sub-title">Preencha suas informações</p>
-    <br>
-  </div>
+    <form id="form">
+      <div>
+        <label for="first-name">Nome:</label>
+        <input type="text" id="first-name">
 
-  <form>
-    <fieldset class="group">
-      <div class="field">
-        <label for="first-name"><strong>Nome:</strong></label>
-        <input type="text" name="firt-name" id="first-name" required>
+        <label for="last-name">Sobrenome:</label>
+        <input type="text" id="last-name">
       </div>
 
-      <div class="field">
-        <label for="last-name"><strong>Sobrenome:</strong></label>
-        <input type="text" name="last-name" id="last-name" required>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password">
       </div>
-    </fieldset>
 
-    <div class="field">
-      <label for="email"><strong>Email:</strong></label>
-      <input type="email" name="email" id="email" required>
-    </div>
+      <div>
+        <label for="">De qual lado da aplicação você desenvolve?</label>
+        <input type="radio" name="dev" value="front-end" checked>Front-end
+      </label>
+      <label for="">
+        <input type="radio" name="dev" value="back-end">Back-end
+      </label>
+      <label for="">
+        <input type="radio" name="dev" value="fullstack">Fullstack
+      </div>
 
-    <div class="field">
-      <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-      <label for="front-end">
-        <input type="radio" name="dev" value="front-end" id="front-end" checked>Front-end
-      </label>
-      <label for="back-end">
-        <input type="radio" name="dev" value="back-end" id="back-end">Back-end
-      </label>
-      <label for="fullstack">
-        <input type="radio" name="dev" value="fullstack" id="fullstack">Fullstack
-      </label>
-    </div>
+      <label for="job">Situação de trabalho:</label>
+      <select name="job" id="job">
+        <option value="" selected disabled>Está buscando emprego?</option>
+        <option value="yes">Sim</option>
+        <option value="no">Não</option>
+      </select>
 
-    <div class="field">
-      <label for="seniority"><strong>Senioridade:</strong>
-        <select name="" id="seniority">
-          <option value="" selected disabled>Selecione...</option>
-          <option value="1">Júnior</option>
-          <option value="2">Pleno</option>
-          <option value="3">Sênior</option>
-        </select>
-      </label>
-    </div>
+      <label for="seniority">Experiência:</label>
+      <select name="seniority" id="seniority">
+        <option value="" selected disabled>Selecione...</option>
+        <option value="junior">Júnior</option>
+        <option value="pleno">Pleno</option>
+        <option value="senior">Senior</option>
+      </select>
 
-    <fieldset class="group">
       <div class="check">
         <label for=""><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
         <input type="checkbox" id="html" name="html" value="HTML">
@@ -75,17 +72,12 @@
         <input type="checkbox" id="java" name="java" value="Java">
         <label for="java">Java</label>
       </div>
-    </fieldset>
 
-    <div class="field">
-      <br>
-      <label for=""><strong>Conte um pouco da sua experiência:</strong></label>
-      <textarea name="experience" id="experience" rows="6" style="width: 26em;"></textarea>
-    </div>
+      <label for="experience">Conte um pouco da sua experiência:</label>
+      <textarea name="experience" id="experience" cols="30" rows="5"></textarea>
 
-    <button type="submit" id="submit"><strong>Concluído</strong></button>
-
-  </form>
-
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </body>
 </html>
