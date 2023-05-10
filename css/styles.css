@@ -4,6 +4,7 @@
 }
 
 body{
+  background:#6c64d3;
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -11,51 +12,142 @@ body{
   justify-content: center;
 }
 
-#main{
-  border: 1px solid #CCCCCC;
-  border-radius: 5px;
-  min-width: 650px;
-  max-width: 800px;
-  margin: 0.75em auto;
+#main-container{
+  background: #f5f7f7;
+  min-width: 400px;
+  max-width: 700px;
+  margin: .75em auto;
   padding: 1em 1.5em;
+  border-radius: 5px;
 }
 
 h1 {
+  font-family: 'Roboto', sans-serif;
+  color: #4b4b4b;
   text-align: center;
   margin: 0 auto;
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #4b4b4b;
   text-align: center;
-  margin: 0.75em auto;
+  margin: .75rem auto;
+  margin-bottom: 1.5rem; 
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  max-width: 100%;
+  gap: 1rem;
+  width: 100%;
   margin: 0 auto;
 }
 
 label {
   font-weight: bold;
-  margin-bottom: 0.2em;
+  margin-bottom: .2em;
 }
 
 input, select, textarea {
-  padding: 0.5em;
-  border: 1px solid #CCCCCC;
-  border-radius: 5px;
+  background: #d5d9e2;
+  color: #3a3a3a;
+  padding: .5em;
+  border: none;
+  border-radius: 3px;
   font-size: 1.1em;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #d5d9e2 inset;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: #6c64d3;
 }
 
 button {
-  padding: 0.7em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: .7em;
   border: none;
-  border-radius: 5px;
-  background-color: #333333;
-  color: #eeeeee;
+  background-color: #6c64d3;
+  color: #f5f7f7;
+  border: 5px solid #6c64d3;
+  border-radius: 3px;
   font-size: 1.2em;
   cursor: pointer;
+}
+
+button:hover {
+  border: 5px solid #9c9dbc;
+}
+
+#name-container, #infos-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#name-container {
+  padding-top: 1rem;
+  border-top: 1px solid #9c9dbc;
+}
+
+#infos-container {
+  padding: 1rem 0;
+  border-bottom: 1px solid #9c9dbc;
+}
+
+#name-container input, #infos-container input{
+  width: 100%;
+  height: 3rem;
+}
+
+#dev-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#job-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  padding: 1rem 0;
+  border-top: 1px solid #9c9dbc;
+  border-bottom: 1px solid #9c9dbc;
+}
+
+#job-container label {
+  margin-bottom: 1rem;
+}
+
+#situation-container, #seniority-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#language-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #9c9dbc;
+}
+
+#languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#languages label {
+  margin-right: 1rem;
 }
