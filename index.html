@@ -8,14 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js" defer></script>
   <title>Cadastro</title>
+  <meta name="description" content="O front-end de um cadastro para desenvolvedores com validação em Javascript">
+  <meta name="author" content="Vinícius Amaral">
   </script>
 </head>
 <body>
-  <div id="main-container">
-    <h1>CADASTRO DE DEVS</h1>
-    <p>Preencha suas informações</p>
+  <main id="main-container">
+    <header>
+      <h1>CADASTRO DE DEVS</h1>
+      <p>Preencha suas informações</p>
+    </header>
 
     <form id="form">
       <div id="name-container">
@@ -34,7 +37,7 @@
         <label for="">De qual lado você desenvolve?</label>
           <div><label for="front-end" class="clickable"><input type="radio" name="dev" value="front-end" id="front-end" checked>Front-end</label></div>
           <div><label for="back-end" class="clickable"><input type="radio" name="dev" value="back-end" id="back-end">Back-end</label></div>
-          <div><label for="fullstack" class="clickable"><input type="radio" name="dev" value="fullstack" id="fullstack">Fullstack</label></div>
+          <div><label for="fullstack" class="clickable"><input type="radio" name="dev" value="fullstack" id="fullstack">Full stack</label></div>
       </div>
 
       <div id="job-container">
@@ -84,6 +87,10 @@
       <button type="submit">ENVIAR</button>
       <div id="erro"></div>
     </form>
-  </div>
+  </main>
+  <footer>
+    <a href="https://github.com/AmaralVinicius/" target="_blank">&copy2023 Vinícius Amaral</a>
+  </footer>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
